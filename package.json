@@ -1,0 +1,51 @@
+{
+	"name": "hasan-simsek-insaat",
+	"version": "1.0.0",
+	"private": true,
+	"description": "Hasan Şimşek İnşaat – Next.js (App Router) kurumsal site + /admin paneli, Cloudflare D1",
+	"scripts": {
+		"dev": "next dev",
+		"build": "next build",
+		"start": "next start",
+		"lint": "next lint",
+		"typecheck": "tsc --noEmit",
+		"db:verify": "node scripts/db-verify.mjs",
+		"db:migrate": "node scripts/db-migrate.mjs",
+		"images:optimize": "node scripts/optimize-images.mjs",
+		"db:admin": "node scripts/db-seed-admin.mjs",
+		"audit": "npm audit --omit=dev --audit-level=high"
+	},
+	"dependencies": {
+		"bcryptjs": "^2.4.3",
+		"class-variance-authority": "^0.7.1",
+		"clsx": "^2.1.1",
+		"jose": "^5.9.6",
+		"lucide-react": "^0.462.0",
+		"next": "^15.1.0",
+		"nodemailer": "^6.9.16",
+		"react": "^19.0.0",
+		"react-dom": "^19.0.0",
+		"sanitize-html": "^2.13.1",
+		"server-only": "^0.0.1",
+		"sharp": "^0.33.5",
+		"sonner": "^2.0.8",
+		"tailwind-merge": "^2.5.5",
+		"zod": "^3.24.1"
+	},
+	"devDependencies": {
+		"@tailwindcss/typography": "^0.5.15",
+		"@types/bcryptjs": "^2.4.6",
+		"@types/node": "^22.10.0",
+		"@types/nodemailer": "^6.4.17",
+		"@types/react": "^19.0.0",
+		"@types/react-dom": "^19.0.0",
+		"@types/sanitize-html": "^2.13.0",
+		"autoprefixer": "^10.4.20",
+		"postcss": "^8.4.49",
+		"tailwindcss": "^3.4.17",
+		"typescript": "^5.7.2"
+	},
+	"engines": {
+		"node": ">=20.9"
+	}
+}

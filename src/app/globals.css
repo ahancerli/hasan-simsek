@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+	--brand: #fdc236;
+	--ink: #1b1d21;
+}
+
+@layer base {
+	html {
+		scroll-behavior: smooth;
+	}
+	body {
+		@apply bg-white text-ink-600 antialiased;
+		font-family: var(--font-montserrat), sans-serif;
+	}
+	h1,
+	h2,
+	h3,
+	h4 {
+		@apply text-ink;
+		font-family: var(--font-montserrat), sans-serif;
+	}
+	::selection {
+		background: var(--brand);
+		color: var(--ink);
+	}
+	:focus-visible {
+		@apply outline-2 outline-offset-2 outline-brand-600;
+	}
+}
+
+@layer components {
+	.btn {
+		@apply inline-flex items-center justify-center gap-2 rounded-md px-6 py-3 text-sm font-bold uppercase tracking-wide transition active:scale-[.98] disabled:cursor-not-allowed disabled:opacity-60;
+	}
+	.btn-brand {
+		@apply bg-brand text-ink hover:bg-brand-500;
+	}
+	.btn-dark {
+		@apply bg-ink text-white hover:bg-ink-700;
+	}
+	.btn-outline {
+		@apply border border-white/40 text-white hover:bg-white hover:text-ink;
+	}
+	.section-title {
+		@apply relative mb-10 font-display text-3xl font-extrabold md:text-4xl;
+	}
+	.section-title::after {
+		content: "";
+		@apply mt-4 block h-1 w-16 rounded bg-brand;
+	}
+	.section-title.center {
+		@apply text-center;
+	}
+	.section-title.center::after {
+		@apply mx-auto;
+	}
+	.input {
+		@apply w-full rounded-md border border-ink-300 bg-white px-4 py-3 text-sm text-ink placeholder:text-ink-500 focus:border-brand-600 focus:outline-none focus:ring-2 focus:ring-brand/40;
+	}
+	.spinner {
+		@apply inline-block animate-spin rounded-full border-brand border-r-transparent;
+	}
+}
+
+/* Zengin metin içeriği (sanitize edilmiş HTML) */
+.rich {
+	@apply prose prose-neutral max-w-none prose-headings:font-display prose-a:text-brand-700 prose-img:rounded-lg;
+}
