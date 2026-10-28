@@ -1,0 +1,14 @@
+node_modules
+.next
+out
+.env
+.env.*
+!.env.example
+*.log
+logs
+.DS_Store
+.vercel
+.wrangler
+next-env.d.ts
+tsconfig.tsbuildinfo
+package-lock.json
